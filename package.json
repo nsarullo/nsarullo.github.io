@@ -1,16 +1,9 @@
 {
-  "name": "laurel",
+  "name": "portfolio",
   "version": "1.0.0",
-  "description": "Laurel Template",
+  "description": "portfolio",
   "author": "Pasquale Vitiello <pasqualevitiello@gmail.com>",
   "license": "GPLv3",
-  "repository": {
-    "type": "git",
-    "url": "https://bitbucket.org/pasqualevitiello/laurel.git"
-  },
-  "bugs": {
-    "url": "https://bitbucket.org/pasqualevitiello/laurel/issues"
-  },
   "scripts": {
     "clean": "rimraf dist/{css/*,js/*,images/*}",
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
@@ -28,7 +21,9 @@
     "watch:js": "onchange \"src/js\" -- run-s build:js",
     "watch:images": "onchange \"src/images\" -- run-s build:images",
     "watch": "run-p serve watch:*",
-    "postinstall": "run-s build watch"
+    "postinstall": "run-s build watch",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build"
   },
   "devDependencies": {
     "autoprefixer": "^9.0.1",
@@ -49,6 +44,9 @@
     "stylelint": "^9.4.0",
     "uglify-es": "^3.3.10"
   },
-  "homepage": "https://bitbucket.org/pasqualevitiello/laurel#readme",
-  "main": ".eslintrc.js"
+  "homepage": "https://nsarullo.github.io",
+  "main": ".eslintrc.js",
+  "dependencies": {
+    "gh-pages": "^3.1.0"
+  }
 }
