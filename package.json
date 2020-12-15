@@ -23,7 +23,7 @@
     "watch": "run-p serve watch:*",
     "postinstall": "run-s build watch",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build"
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "autoprefixer": "^9.0.1",
@@ -44,7 +44,7 @@
     "stylelint": "^9.4.0",
     "uglify-es": "^3.3.10"
   },
-  "homepage": "https://nsarullo.github.io",
+  "homepage": "https://nsarullo.github.io/nsarullo.github.io",
   "main": ".eslintrc.js",
   "dependencies": {
     "gh-pages": "^3.1.0"
